@@ -1,0 +1,20 @@
+EXPERIENCE:
+  resolved_type: array
+  experienceTopLevelSection marker: FOUND
+    title: NO
+    companyName: NO
+    description: NO
+    startDate: NO
+    endDate: NO
+
+ABOVE ACTIVITY:
+  resolved_type: array
+  aboutSection marker: FOUND
+    name: NO
+    headline: NO
+    location: NO
+    profileImage: NO
+    backgroundImage: NO
+
+SNIPPET (exp, first 300 chars):
+{"observabilityIdentifier":"com.linkedin.sdui.impl.profile.components.experienceTopLevelSection","children":["$","$L4",null,{"componentKey":"com.linkedin.sdui.profile.card.refACoAACJTE2MBDOEbVi1kwgImy2a6WJXPQ0MkLksExperienceTopLevelSection","children":["$","$L5","com.linkedin.sdui.profile.card.refAC

@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import anime from "animejs/lib/anime.es.js";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -10,46 +9,9 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<any>(null);
 
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  // Anime.js Button Hover/Click Effects
-  useEffect(() => {
-    if (buttonRef.current) {
-      buttonRef.current.addEventListener("mouseenter", () => {
-        if (!loading && url) {
-          anime({
-            targets: buttonRef.current,
-            scale: 1.05,
-            duration: 800,
-            elasticity: 400,
-          });
-        }
-      });
-      buttonRef.current.addEventListener("mouseleave", () => {
-        anime({
-          targets: buttonRef.current,
-          scale: 1,
-          duration: 600,
-          elasticity: 300,
-        });
-      });
-    }
-  }, [loading, url]);
-
-  const triggerClickAnimation = () => {
-    anime({
-      targets: buttonRef.current,
-      scale: [0.9, 1.05, 1],
-      easing: "easeOutElastic(1, .8)",
-      duration: 600,
-    });
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!url) return;
-
-    triggerClickAnimation();
 
     setLoading(true);
     setError(null);
@@ -69,23 +31,9 @@ export default function Home() {
           json.message || json.error || "Failed to fetch profile",
         );
       }
-
       setData(json);
     } catch (err: any) {
       setError(err.message || "An unexpected error occurred");
-
-      // Error shake animation
-      anime({
-        targets: ".error-message",
-        translateX: [
-          { value: -10, duration: 100 },
-          { value: 10, duration: 100 },
-          { value: -10, duration: 100 },
-          { value: 10, duration: 100 },
-          { value: 0, duration: 100 },
-        ],
-        easing: "easeInOutQuad",
-      });
     } finally {
       setLoading(false);
     }
@@ -101,51 +49,60 @@ export default function Home() {
     return str.replace(
       /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
       function (match) {
-        let cls = "json-number";
+        let cls = "color: #f78c6c"; // number
         if (/^"/.test(match)) {
           if (/:$/.test(match)) {
-            cls = "json-key";
+            cls = "color: #82aaff; font-weight: 500"; // key
           } else {
-            cls = "json-string";
+            cls = "color: #addb67"; // string
           }
         } else if (/true|false/.test(match)) {
-          cls = "json-boolean";
+          cls = "color: #ff5874"; // boolean
         } else if (/null/.test(match)) {
-          cls = "json-null";
+          cls = "color: #c4ce3b"; // null
         }
-        return '<span class="' + cls + '">' + match + "</span>";
+        return '<span style="' + cls + '">' + match + "</span>";
       },
     );
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     show: {
       opacity: 1,
       y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
+      transition: { staggerChildren: 0.1, ease: "easeOut", duration: 0.5 },
     },
   };
 
-  return (
-    <main className="container">
-      <motion.div variants={containerVariants} initial="hidden" animate="show">
-        <motion.div variants={itemVariants} className="header">
-          <h1 className="title">LinkedIn Scraper API</h1>
-          <p className="subtitle">Real-time profile extraction dashboard</p>
-        </motion.div>
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 200, damping: 20 },
+    },
+  };
 
-        <motion.div variants={itemVariants} className="card">
+  const shakeAnimation = {
+    x: [0, -10, 10, -10, 10, 0],
+    transition: { duration: 0.4 },
+  };
+
+  return (
+    <div className="app-wrapper">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="header-accent">
+          <h1 className="title">LinkedIn Extractor</h1>
+          <p className="subtitle">
+            Gather professional experience and education seamlessly from public
+            profiles.
+          </p>
+
           <form onSubmit={handleSubmit} className="form-group">
             <input
               type="url"
@@ -157,12 +114,13 @@ export default function Home() {
               disabled={loading}
               autoComplete="off"
             />
-            <button
-              ref={buttonRef}
+            <motion.button
               type="submit"
               className="button"
               disabled={loading || !url}
-              style={{ minWidth: "120px" }}
+              whileHover={loading || !url ? {} : { scale: 1.05 }}
+              whileTap={loading || !url ? {} : { scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <AnimatePresence mode="wait">
                 {loading ? (
@@ -176,91 +134,117 @@ export default function Home() {
                 ) : (
                   <motion.span
                     key="text"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                   >
-                    Extract
+                    Extract Profile
                   </motion.span>
                 )}
               </AnimatePresence>
-            </button>
+            </motion.button>
           </form>
 
           <AnimatePresence>
             {error && (
-              <motion.div
-                initial={{ opacity: 0, height: 0, marginTop: 0 }}
-                animate={{ opacity: 1, height: "auto", marginTop: "1rem" }}
-                exit={{ opacity: 0, height: 0, marginTop: 0 }}
-                className="error-message"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="8" x2="12" y2="12"></line>
-                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                </svg>
+              <motion.div animate={shakeAnimation} className="error-message">
                 {error}
               </motion.div>
             )}
           </AnimatePresence>
-        </motion.div>
+        </div>
+      </motion.div>
 
-        <AnimatePresence>
-          {data && (
-            <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.95 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="card"
-              style={{ padding: 0, overflow: "hidden" }}
-            >
-              <div
+      <AnimatePresence>
+        {data && (
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            className="results-container"
+          >
+            {data.experience && data.experience.length > 0 && (
+              <>
+                <h2 className="section-header">Experience</h2>
+                <div className="bento-grid">
+                  {data.experience.map((exp: any, i: number) => (
+                    <motion.div
+                      key={i}
+                      variants={cardVariants}
+                      className="bento-card"
+                    >
+                      <span className="badge">Employment</span>
+                      <h3 className="bento-title">
+                        {exp.title || "Unknown Role"}
+                      </h3>
+                      <div className="bento-subtitle">
+                        {exp.companyName || "Unknown Company"}
+                      </div>
+                      <div className="bento-meta">
+                        {exp.timePeriod?.startDate} —{" "}
+                        {exp.timePeriod?.endDate || "Present"}
+                      </div>
+                      {exp.description && exp.description.length < 200 && (
+                        <p className="bento-desc">{exp.description}</p>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {data.education && data.education.length > 0 && (
+              <>
+                <h2 className="section-header">Education</h2>
+                <div className="bento-grid">
+                  {data.education.map((edu: any, i: number) => (
+                    <motion.div
+                      key={i}
+                      variants={cardVariants}
+                      className="bento-card"
+                    >
+                      <span className="badge">Academic</span>
+                      <h3 className="bento-title">
+                        {edu.schoolName || "Unknown School"}
+                      </h3>
+                      <div className="bento-subtitle">
+                        {edu.degreeName}{" "}
+                        {edu.fieldOfStudy ? `in ${edu.fieldOfStudy}` : ""}
+                      </div>
+                      <div className="bento-meta">
+                        {edu.timePeriod?.startDate} — {edu.timePeriod?.endDate}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            <>
+              <h2 className="section-header">Raw API Payload</h2>
+              <motion.div
+                variants={cardVariants}
                 style={{
+                  background: "#1e1e1e",
+                  borderRadius: "1rem",
                   padding: "1.5rem",
-                  borderBottom: "1px solid var(--border)",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h2 className="section-title" style={{ margin: 0 }}>
-                  Extraction Results
-                </h2>
-                <motion.span
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.3, type: "spring" }}
-                  className="badge"
-                >
-                  200 OK
-                </motion.span>
-              </div>
-              <div
-                style={{
-                  padding: "1.5rem",
-                  backgroundColor: "var(--bg-input)",
+                  overflow: "auto",
                 }}
               >
                 <pre
-                  className="json-container"
+                  style={{
+                    fontFamily: "monospace",
+                    fontSize: "0.85rem",
+                    color: "#abb2bf",
+                    margin: 0,
+                  }}
                   dangerouslySetInnerHTML={{ __html: syntaxHighlight(data) }}
                 />
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
-    </main>
+              </motion.div>
+            </>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

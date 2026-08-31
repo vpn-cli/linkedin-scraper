@@ -1,0 +1,256 @@
+=== DIAGNOSTIC: profileCardsExperienceOnly ===
+Raw size: 68825 bytes
+Resolved type: array
+
+--- Step 1: Locate experienceTopLevelSection ---
+FOUND
+Node metadata: {
+  "observabilityIdentifier": "com.linkedin.sdui.impl.profile.components.experienceTopLevelSection",
+  "componentKey": "com.linkedin.sdui.profile.card.refACoAACJTE2MBDOEbVi1kwgImy2a6WJXPQ0MkLksExperienceTopLevelSection"
+}
+
+--- Step 2: Find all <li> elements ---
+Total <li> elements found: 4
+
+--- Experience <li> #0 ---
+Metadata: {}
+Meaningful strings: [
+  "0",
+  "proto.sdui.triggers.Trigger",
+  "click",
+  "proto.sdui.triggers.ClickTrigger",
+  "proto.sdui.actions.core.Navigate",
+  "url",
+  "proto.sdui.actions.core.NavigateToUrl",
+  "url",
+  "https://www.linkedin.com/company/89569668/",
+  "var(--a2d989d7)",
+  "var(--_4c78be03)",
+  "var(--_4c78be03)",
+  "Advisor",
+  "sans",
+  "small",
+  "normal",
+  "normal",
+  "default",
+  "start",
+  "Jun 2026 - Present · 3 mos",
+  "$undefined",
+  "none"
+]
+Truncated structure:
+[
+  "$",
+  "li",
+  "0",
+  {
+    "className": "_11f68f58 _14db55c8 _01e54e47 _6a819a32",
+    "children": [
+      [
+        "$",
+        "div",
+        null,
+        {
+          "className": "[...]",
+          "children": "[...]"
+        }
+      ],
+      [
+        "$",
+        "div",
+        null,
+        {
+          "className": "[...]",
+          "children": "[...]"
+        }
+      ]
+    ]
+  }
+]
+
+--- Experience <li> #1 ---
+Metadata: {}
+Meaningful strings: [
+  "1",
+  "proto.sdui.triggers.Trigger",
+  "click",
+  "proto.sdui.triggers.ClickTrigger",
+  "proto.sdui.actions.core.Navigate",
+  "url",
+  "proto.sdui.actions.core.NavigateToUrl",
+  "url",
+  "https://www.linkedin.com/company/89569668/",
+  "var(--a2d989d7)",
+  "var(--_4c78be03)",
+  "var(--_4c78be03)",
+  "Co-Founder",
+  "sans",
+  "small",
+  "normal",
+  "normal",
+  "default",
+  "start",
+  "Full-time",
+  "$undefined",
+  "none",
+  "sans",
+  "small",
+  "normal",
+  "normal",
+  "default",
+  "start",
+  "Feb 2024 - Jun 2026 · 2 yrs 5 mos",
+  "$undefined",
+  "none",
+  "sans",
+  "small",
+  "normal",
+  "normal",
+  "open",
+  "start",
+  "$4e",
+  "0",
+  "Connecting the Dots in Payments… is the global platform that finally centralizes all payments-related content, both educational and industry news. ",
+  "$4e",
+  "1",
+  "$4e",
+  "2",
+  "Let’s build a better payment ecosystem together.",
+  "1x",
+  "$undefined",
+  "underline",
+  "more",
+  "id",
+  "proto.sdui.actions.core.SetState",
+  "id",
+  "stringValue",
+  "Expanded",
+  "$undefined",
+  "$undefined",
+  "$undefined",
+  "experience-see-media-button",
+  "SHORT_PRESS",
+  "experience_media",
+  "proto.sdui.triggers.Trigger",
+  "click",
+  "proto.sdui.triggers.ClickTrigger",
+  "proto.sdui.actions.core.Navigate",
+  "url",
+  "proto.sdui.actions.core.NavigateToUrl",
+  "url",
+  "https://www.connectingthedotsinpayments.com/",
+  "embeddedWebView",
+  "proto.sdui.actions.core.EmbeddedWebViewUrl",
+  "google.protobuf.Empty",
+  "$11:props:children:props:viewTrackingSpecs",
+  "$11:props:children:props:viewTrackingSpecs",
+  "1.5x",
+  "horizontal",
+  "experience-see-media-button",
+  "SHORT_PRESS",
+  "experience_media",
+  "10.8rem",
+  "Thumbnail for Connecting the dots in Payments",
+  "iconDisabled",
+  "fillAvailable",
+  "fillAvailable",
+  "center",
+  "isolate",
+  "WIDTH_AND_HEIGHT",
+  "light",
+  "Connecting the dots in Payments"
+]
+Truncated structure:
+[
+  "$",
+  "li",
+  "1",
+  {
+    "className": "_11f68f58 _14db55c8 _01e54e47 _6a819a32",
+    "children": [
+      [
+        "$",
+        "div",
+        null,
+        {
+          "className": "[...]",
+          "children": "[...]"
+        }
+      ],
+      [
+        "$",
+        "div",
+        null,
+        {
+          "className": "[...]",
+          "children": "[...]"
+        }
+      ]
+    ]
+  }
+]
+
+--- Experience <li> #2 ---
+Metadata: {}
+Meaningful strings: [
+  "0",
+  "proto.sdui.triggers.Trigger",
+  "click",
+  "proto.sdui.triggers.ClickTrigger",
+  "proto.sdui.actions.core.Navigate",
+  "url",
+  "proto.sdui.actions.core.NavigateToUrl",
+  "url",
+  "https://www.linkedin.com/company/18142614/",
+  "var(--a2d989d7)",
+  "var(--_4c78be03)",
+  "var(--_4c78be03)",
+  "Advisor",
+  "sans",
+  "small",
+  "normal",
+  "normal",
+  "default",
+  "start",
+  "Apr 2026 - Aug 2026 · 5 mos",
+  "$undefined",
+  "none",
+  "sans",
+  "small",
+  "normal",
+  "normal",
+  "default",
+  "start",
+  "New York, United States",
+  "$undefined",
+  "none"
+]
+Truncated structure:
+[
+  "$",
+  "li",
+  "0",
+  {
+    "className": "_11f68f58 _14db55c8 _01e54e47 _6a819a32",
+    "children": [
+      [
+        "$",
+        "div",
+        null,
+        {
+          "className": "[...]",
+          "children": "[...]"
+        }
+      ],
+      [
+        "$",
+        "div",
+        null,
+        {
+          "className": "[...]",
+          "children": "[...]"
+        }
+      ]
+    ]
+  }
+]

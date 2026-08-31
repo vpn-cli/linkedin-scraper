@@ -1,0 +1,331 @@
+=== DIAGNOSTIC: Entity Collection Items in Experience ===
+Raw size: 68825 bytes
+experienceTopLevelSection: FOUND
+Total entity-collection-item nodes: 5
+
+======================================================================
+ENTITY COLLECTION ITEM #0
+componentKey: "entity-collection-item-b28d603"
+======================================================================
+componentKey: "entity-collection-item-b28d603"
+<div>
+  <$L4>
+    <hr>
+      role: "presentation"
+  <div>
+    <$L7>
+      <div>
+        <div>
+          <div>
+            <$L7>
+              <$L22>
+                <$L4>
+                  componentKey: "34091c2e-ec0a-495e-9736-62cebce27d1b"
+                  <$L23>
+                    <$L4f>
+                      a11yText: "Monyz logo"
+                      shape: "rounded"
+                      selectionMethod: "WIDTH_AND_HEIGHT"
+                    viewTrackingSpecs: "$9:props:children:props:viewTrackingSpecs"
+                    height: "6x"
+                    width: "6x"
+              <div>
+                <$L22>
+                  <$L23>
+                    <div>
+                      <div>
+                        <$L7>
+                          <div>
+                            <p>
+                              STRING: "Founder, CEO"
+                            <p>
+                              STRING: "Monyz"
+                          direction: "horizontal"
+                      <$L21>
+                        textProps:
+                          [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                          children:
+                            "Jun 2026 - Present · 3 mos"
+                      <$L21>
+                        textProps:
+                          [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                          children:
+                            "New York, United States"
+                <div>
+                  <$L4d>
+                    textProps:
+                      [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                      children:
+                        "Monyz is the accelerator built for FinTechs. We turn attention into revenue."
+                    expansionKey: "expandable_text_block_auto-component-f8f31889-f27c-4ea0-a30e-f25254ff72e6"
+                    onShowLessAction: "$undefined"
+                    textColorExpression: "$undefined"
+                    viewTrackingSpecs: "$undefined"
+              direction: "horizontal"
+      <div>
+        <$L7>
+          direction: "horizontal"
+      direction: "horizontal"
+  componentkey: "entity-collection-item-b28d603"
+
+======================================================================
+ENTITY COLLECTION ITEM #1
+componentKey: "entity-collection-item-2b478d9f"
+======================================================================
+componentKey: "entity-collection-item-2b478d9f"
+<div>
+  <$L4>
+    <hr>
+      role: "presentation"
+  <div>
+    <$L7>
+      <div>
+        <div>
+          <$L7>
+            <$L22>
+              <$L4>
+                componentKey: "373c0ea3-cf7f-4940-8443-9feaddd1cf46"
+                <$L23>
+                  <$L4f>
+                    a11yText: "Connecting the dots in payments... logo"
+                    shape: "rounded"
+                    selectionMethod: "WIDTH_AND_HEIGHT"
+                  viewTrackingSpecs: "$c:props:children:props:viewTrackingSpecs"
+                  height: "6x"
+                  width: "6x"
+            <div>
+              <$L22>
+                <$L23>
+                  <div>
+                    <div>
+                      <$L7>
+                        <div>
+                          <p>
+                            STRING: "Connecting the dots in payments..."
+                          <p>
+                            STRING: "2 yrs 7 mos"
+                        direction: "horizontal"
+                    <$L21>
+                      textProps:
+                        [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                        children:
+                          "San Francisco Bay Area · Remote"
+            direction: "horizontal"
+      direction: "horizontal"
+  <ul>
+    <li key="0">
+      <div>
+        <div>
+      <div>
+        <$L22>
+          <$L23>
+            <div>
+              <p>
+                STRING: "Advisor"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "Jun 2026 - Present · 3 mos"
+        <div>
+    <li key="1">
+      <div>
+        <div>
+      <div>
+        <$L22>
+          <$L23>
+            <div>
+              <p>
+                STRING: "Co-Founder"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "Full-time"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "Feb 2024 - Jun 2026 · 2 yrs 5 mos"
+        <div>
+          <$L4d>
+            textProps:
+              [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+              children:
+                "$4e"
+                "0"
+                "Connecting the Dots in Payments… is the global platform that finally centralizes all payments-related content, both educational and industry news. "
+                "$4e"
+                "1"
+                <br/>
+                "$4e"
+                "2"
+                <br/>
+                "Let’s build a better payment ecosystem together."
+            expansionKey: "expandable_text_block_auto-component-7fcc799e-514e-4554-83f8-caa2a79246ae"
+            onShowLessAction: "$undefined"
+            textColorExpression: "$undefined"
+            viewTrackingSpecs: "$undefined"
+          <div>
+            <$L22>
+              <$L4>
+                componentKey: "30073cf6-43c4-4792-8a5e-0cc08f58b0dd"
+                <$L23>
+                  <div>
+                    <$L7>
+                      <$L4>
+                        componentKey: "3439dc3f-f5aa-4088-90a4-4c2fab294a3c"
+                        <div>
+                          <$L4f>
+                            a11yText: "Thumbnail for Connecting the dots in Payments"
+                            color: "iconDisabled"
+                            height: "fillAvailable"
+                            width: "fillAvailable"
+                            location: "center"
+                            isolation: "isolate"
+                            selectionMethod: "WIDTH_AND_HEIGHT"
+                          <div>
+                            <$L20>
+                              display: "block"
+                              color: "iconKnockout"
+                              height: "3x"
+                              width: "3x"
+                              location: "center"
+                              isolation: "isolate"
+                            data-color-scheme: "light"
+                      <div>
+                        <p>
+                          STRING: "Connecting the dots in Payments"
+                      direction: "horizontal"
+                  viewTrackingSpecs: "$11:props:children:props:viewTrackingSpecs"
+                  offsetTop: "1.5x"
+  componentkey: "entity-collection-item-2b478d9f"
+
+======================================================================
+ENTITY COLLECTION ITEM #2
+componentKey: "entity-collection-item--359d84a"
+======================================================================
+componentKey: "entity-collection-item--359d84a"
+<div>
+  <$L4>
+    <hr>
+      role: "presentation"
+  <div>
+    <$L7>
+      <div>
+        <div>
+          <$L7>
+            <$L22>
+              <$L4>
+                componentKey: "5f2db91b-3098-4328-a138-5a07d7413d4b"
+                <$L23>
+                  <$L4f>
+                    a11yText: "VGS logo"
+                    shape: "rounded"
+                    selectionMethod: "WIDTH_AND_HEIGHT"
+                  viewTrackingSpecs: "$12:props:children:props:viewTrackingSpecs"
+                  height: "6x"
+                  width: "6x"
+            <div>
+              <$L22>
+                <$L23>
+                  <div>
+                    <div>
+                      <$L7>
+                        <div>
+                          <p>
+                            STRING: "VGS"
+                          <p>
+                            STRING: "2 yrs 3 mos"
+                        direction: "horizontal"
+            direction: "horizontal"
+      direction: "horizontal"
+  <ul>
+    <li key="0">
+      <div>
+        <div>
+      <div>
+        <$L22>
+          <$L23>
+            <div>
+              <p>
+                STRING: "Advisor"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "Apr 2026 - Aug 2026 · 5 mos"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "New York, United States"
+        <div>
+    <li key="1">
+      <div>
+        <div>
+      <div>
+        <$L22>
+          <$L23>
+            <div>
+              <p>
+                STRING: "Global Director, Revenue"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "Full-time"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "Jun 2024 - Apr 2026 · 1 yr 11 mos"
+              <$L21>
+                textProps:
+                  [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                  children:
+                    "San Francisco Bay Area · Remote"
+        <div>
+          <$L4d>
+            textProps:
+              [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+              children:
+                "Lead and influence the overall revenue generation strategies and execution across new and existing business, marketing, and partnerships at VGS."
+            expansionKey: "expandable_text_block_auto-component-6695b801-e80e-4790-b352-62504c67009f"
+            onShowLessAction: "$undefined"
+            textColorExpression: "$undefined"
+            viewTrackingSpecs: "$undefined"
+          <div>
+            <$L22>
+              <$L4>
+                componentKey: "8ced1e20-55e2-4d3f-90d5-5bd074d28993"
+                <$L23>
+                  <div>
+                    <$L7>
+                      <$L4>
+                        componentKey: "62db5097-077e-4b68-a082-b20844642fb4"
+                        <div>
+                          <$L4f>
+                            a11yText: "Thumbnail for World's Leader in Payment Tokenization - VGS"
+                            color: "iconDisabled"
+                            height: "fillAvailable"
+                            width: "fillAvailable"
+                            location: "center"
+                            isolation: "isolate"
+                            selectionMethod: "WIDTH_AND_HEIGHT"
+                          <div>
+                            <$L20>
+                              display: "block"
+                              color: "iconKnockout"
+                              height: "3x"
+                              width: "3x"
+                              location: "center"
+                              isolation: "isolate"
+                            data-color-scheme: "light"
+                      <div>
+                        <p>
+                          STRING: "World's Leader in Payment Tokenization - VGS"
+                      direction: "horizontal"
+                  viewTrackingSpecs: "$17:props:children:props:viewTrackingSpecs"
+                  offsetTop: "1.5x"
+  componentkey: "entity-collection-item--359d84a"

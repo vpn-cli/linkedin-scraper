@@ -1,0 +1,65 @@
+ENTITY COLLECTION ITEM #0
+componentKey: "entity-collection-item-b28d603"
+======================================================================
+componentKey: "entity-collection-item-b28d603"
+<div>
+  <$L4>
+    <hr>
+      role: "presentation"
+  <div>
+    <$L7>
+      <div>
+        <div>
+          <div>
+            <$L7>
+              <$L22>
+                <$L4>
+                  componentKey: "34091c2e-ec0a-495e-9736-62cebce27d1b"
+                  <$L23>
+                    <$L4f>
+                      a11yText: "Monyz logo"
+                      shape: "rounded"
+                      selectionMethod: "WIDTH_AND_HEIGHT"
+                    viewTrackingSpecs: "$9:props:children:props:viewTrackingSpecs"
+                    height: "6x"
+                    width: "6x"
+              <div>
+                <$L22>
+                  <$L23>
+                    <div>
+                      <div>
+                        <$L7>
+                          <div>
+                            <p>
+                              STRING: "Founder, CEO"
+                            <p>
+                              STRING: "Monyz"
+                          direction: "horizontal"
+                      <$L21>
+                        textProps:
+                          [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                          children:
+                            "Jun 2026 - Present · 3 mos"
+                      <$L21>
+                        textProps:
+                          [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                          children:
+                            "New York, United States"
+                <div>
+                  <$L4d>
+                    textProps:
+                      [fontFamily=sans, fontSize=small, fontWeight=normal, fontStyle=normal]
+                      children:
+                        "Monyz is the accelerator built for FinTechs. We turn attention into revenue."
+                    expansionKey: "expandable_text_block_auto-component-f8f31889-f27c-4ea0-a30e-f25254ff72e6"
+                    onShowLessAction: "$undefined"
+                    textColorExpression: "$undefined"
+                    viewTrackingSpecs: "$undefined"
+              direction: "horizontal"
+      <div>
+        <$L7>
+          direction: "horizontal"
+      direction: "horizontal"
+  componentkey: "entity-collection-item-b28d603"
+
+======================================================================
