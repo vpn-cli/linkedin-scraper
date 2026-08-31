@@ -158,7 +158,7 @@ export default function Home() {
       <AnimatePresence>
         {data && (
           <motion.div
-            variants={containerVariants}
+            variants={containerVariants as any}
             initial="hidden"
             animate="show"
             className="results-container"
@@ -170,7 +170,7 @@ export default function Home() {
                   {data.experience.map((exp: any, i: number) => (
                     <motion.div
                       key={i}
-                      variants={cardVariants}
+                      variants={cardVariants as any}
                       className="bento-card"
                     >
                       <span className="badge">Employment</span>
@@ -200,7 +200,7 @@ export default function Home() {
                   {data.education.map((edu: any, i: number) => (
                     <motion.div
                       key={i}
-                      variants={cardVariants}
+                      variants={cardVariants as any}
                       className="bento-card"
                     >
                       <span className="badge">Academic</span>
@@ -223,7 +223,7 @@ export default function Home() {
             <>
               <h2 className="section-header">Raw API Payload</h2>
               <motion.div
-                variants={cardVariants}
+                variants={cardVariants as any}
                 style={{
                   background: "#1e1e1e",
                   borderRadius: "1rem",
