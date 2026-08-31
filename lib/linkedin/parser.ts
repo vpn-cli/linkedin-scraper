@@ -19,18 +19,17 @@ type RawResponses = {
 /* -------------------------------------------------------------------------- */
 
 export function parseProfileResponse(responses: RawResponses): ProfileResponse {
-  const activity = parseRscResponse(responses.activity);
+  const activity = safeParseRsc(responses.activity);
+
   const above = parseComponent(
     responses.components[COMPONENT_IDS.aboveActivity],
   );
+
   const experience = parseComponent(
     responses.components[COMPONENT_IDS.experience],
   );
 
-  /*
-   * These remaining components are deliberately ignored for this
-   * first sprint implementation per the user instruction.
-   */
+  // Keep these disabled until their RSC structures are mapped.
   const educationAndCertifications = null;
   const languages = null;
   const skills = null;
@@ -38,22 +37,6 @@ export function parseProfileResponse(responses: RawResponses): ProfileResponse {
   const errors: ProfileResponse["errors"] = [];
 
   const profile = parseProfileHeader(above);
-
-  if (!profile.headline)
-    errors.push({
-      field: "profile.headline",
-      reason: "Parsing logic not yet implemented",
-    });
-  if (!profile.location)
-    errors.push({
-      field: "profile.location",
-      reason: "Parsing logic not yet implemented",
-    });
-  if (!profile.profileImage)
-    errors.push({
-      field: "profile.profileImage",
-      reason: "Parsing logic not yet implemented",
-    });
 
   profile.about = parseAbout(above);
 
@@ -68,6 +51,27 @@ export function parseProfileResponse(responses: RawResponses): ProfileResponse {
     services: parseServices(above),
   };
 
+  if (!profile.headline) {
+    errors.push({
+      field: "profile.headline",
+      reason: "Parsing logic not yet implemented",
+    });
+  }
+
+  if (!profile.location) {
+    errors.push({
+      field: "profile.location",
+      reason: "Parsing logic not yet implemented",
+    });
+  }
+
+  if (!profile.profileImage) {
+    errors.push({
+      field: "profile.profileImage",
+      reason: "Parsing logic not yet implemented",
+    });
+  }
+
   if (errors.length > 0) {
     result.errors = errors;
   }
@@ -79,11 +83,24 @@ export function parseProfileResponse(responses: RawResponses): ProfileResponse {
 /* RSC decoding                                                               */
 /* -------------------------------------------------------------------------- */
 
+function safeParseRsc(response?: string): unknown {
+  if (!response) {
+    return null;
+  }
+
+  try {
+    return parseRscResponse(response);
+  } catch {
+    return null;
+  }
+}
+
 function parseComponent(response?: string): unknown {
   if (!response) {
     return null;
   }
-  return parseRscResponse(response);
+
+  return safeParseRsc(response);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -98,41 +115,47 @@ export function findByObservabilityIdentifier(
     return null;
   }
 
+  if (Array.isArray(root)) {
+    for (const item of root) {
+      const match = findByObservabilityIdentifier(item, identifier);
+
+      if (match !== null) {
+        return match;
+      }
+    }
+
+    return null;
+  }
+
   const record = root as Record<string, unknown>;
 
   if (
     record["$type"] === "com.linkedin.rsc.ObservabilityTracking" &&
-    record.identifier === identifier
+    record["identifier"] === identifier
   ) {
     return root;
   }
 
-  if (Array.isArray(root)) {
-    for (const item of root) {
-      const match = findByObservabilityIdentifier(item, identifier);
-      if (match) return match;
-    }
-    return null;
-  }
-
   for (const child of Object.values(record)) {
     const match = findByObservabilityIdentifier(child, identifier);
-    if (match) return match;
+
+    if (match !== null) {
+      return match;
+    }
   }
 
   return null;
 }
 
 /* -------------------------------------------------------------------------- */
-/* Profile Extractors (Stubs for User Implementation)                         */
+/* Profile                                                                    */
 /* -------------------------------------------------------------------------- */
 
 function parseProfileHeader(
-  aboveActivityComponent: unknown,
+  _aboveActivityComponent: unknown,
 ): ProfileResponse["profile"] {
-  // TODO: Traverse aboveActivityComponent to map the target nodes here.
   return {
-    name: "Target Name Stub",
+    name: "",
     headline: "",
     location: "",
     about: "",
@@ -141,41 +164,42 @@ function parseProfileHeader(
   };
 }
 
-function parseAbout(aboveActivityComponent: unknown): string {
-  // TODO: Traverse aboveActivityComponent to find the About marker here.
+function parseAbout(_aboveActivityComponent: unknown): string {
   return "";
 }
 
-function parseExperience(experienceComponent: unknown): ExperienceItem[] {
-  // TODO: Traverse experienceComponent and map to the generic ExperienceItem array structure here.
-  const experiences: ExperienceItem[] = [];
-  return experiences;
+/* -------------------------------------------------------------------------- */
+/* Experience                                                                 */
+/* -------------------------------------------------------------------------- */
+
+function parseExperience(_experienceComponent: unknown): ExperienceItem[] {
+  return [];
 }
 
 /* -------------------------------------------------------------------------- */
-/* Disabled Extractors (Per Instructions)                                     */
+/* Remaining extractors                                                       */
 /* -------------------------------------------------------------------------- */
 
-function parseEducation(component: unknown): EducationItem[] {
+function parseEducation(_component: unknown): EducationItem[] {
   return [];
 }
 
-function parseCertifications(component: unknown): CertificationItem[] {
+function parseCertifications(_component: unknown): CertificationItem[] {
   return [];
 }
 
-function parseSkills(component: unknown): string[] {
+function parseSkills(_component: unknown): string[] {
   return [];
 }
 
-function parseLanguages(component: unknown): string[] {
+function parseLanguages(_component: unknown): string[] {
   return [];
 }
 
-function parseFeatured(component: unknown): FeaturedItem[] {
+function parseFeatured(_component: unknown): FeaturedItem[] {
   return [];
 }
 
-function parseServices(component: unknown): string[] {
+function parseServices(_component: unknown): string[] {
   return [];
 }
