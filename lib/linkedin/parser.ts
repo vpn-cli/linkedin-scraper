@@ -1016,9 +1016,12 @@ function filterUsefulStrings(
 function isUiText(
   value: string
 ): boolean {
-  return /^(About|Experience|Education|Skills|Languages|Featured|Services|Show all|See all|Follow|Following|Connect|Message|More|Activity|Posts|Post|Present|Current)$/i.test(
+  return /^(About|Experience|Education|Skills|Languages|Featured|Services|Show all|See all|Follow|Following|Connect|Message|More|Activity|Posts|Post|Present|Current|open|small|large|horizontal|vertical|div|section|li|listitem|h2|h1|h3|id|contents|0|1|default|profile-card-featured|ProfileCardsServedEvent|1x|1\.5x|2x|3x)$/i.test(
     value
-  );
+  ) ||
+  value.includes('currentPage') ||
+  value.includes('isEnd') ||
+  value.includes('isBeginning');
 }
 
 function isImageAltText(
@@ -1033,25 +1036,26 @@ function looksLikeTechnicalIdentifier(
   value: string
 ): boolean {
   return (
-    value.startsWith(
-      "com.linkedin."
-    ) ||
-    value.startsWith(
-      "proto."
-    ) ||
-    value.startsWith(
-      "urn:"
-    ) ||
-    value.startsWith(
-      "Profile_"
-    ) ||
-    value.startsWith(
-      "profile_"
-    ) ||
-    value.includes(
-      "componentKey"
-    ) ||
-    value.length > 500
+    value.startsWith("com.linkedin.") ||
+    value.startsWith("proto.") ||
+    value.startsWith("urn:") ||
+    value.startsWith("Profile_") ||
+    value.startsWith("profile_") ||
+    value.includes("componentKey") ||
+    value.startsWith("carousel-") ||
+    value.includes("100_100/B5") ||
+    value.includes("200_200/B5") ||
+    value.includes("400_400/B5") ||
+    value.includes("profile-displayphoto-shrink_") ||
+    value.includes("company-logo_") ||
+    value.includes("?e=") ||
+    value.includes("var(--") ||
+    value.includes("https://www.linkedin.com/") ||
+    value.includes("experience-divider") ||
+    /^\s*(_?[0-9a-f]{8}\s*)+$/.test(value) ||
+    /^[A-Za-z0-9+/=]{15,}$/.test(value) ||
+    /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.test(value) ||
+    value.length > 300
   );
 }
 

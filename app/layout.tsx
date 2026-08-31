@@ -1,16 +1,18 @@
+import "./globals.css";
+
 export const metadata = {
-  title: 'Hiring Challenge API API',
-  description: 'Generic scraper API infrastructure',
-}
+  title: "LinkedIn API Dashboard",
+  description: "Test environment for the LinkedIn Scraper API",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>{children}</body>
     </html>
-  )
+  );
 }

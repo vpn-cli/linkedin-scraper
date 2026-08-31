@@ -207,6 +207,10 @@ export class LinkedInClient {
         const [id, response] =
           result.value;
 
+        // DEBUG: Dump component response to disk for structural inspection
+        const fs = require('fs');
+        fs.writeFileSync(`debug-${id}.json`, response, 'utf-8');
+
         components[id] = response;
       } else {
         console.warn(

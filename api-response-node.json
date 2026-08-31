@@ -9,10 +9,10 @@
   },
   "experience": [
     {
-      "title": "small",
-      "companyName": "open",
+      "title": "Co-chair",
+      "companyName": "Gates Foundation",
       "location": "",
-      "description": "Co-chair _02484ad3 _61558a10 _1736033f bb60b960 _09ad6ea6 _73f0271c b4f312e9 dbc6a59b bde9e0a3 _401ea029 Gates Foundation",
+      "description": "rounded WIDTH_AND_HEIGHT p",
       "timePeriod": {
         "startDate": "2000",
         "endDate": "Present"
@@ -22,7 +22,7 @@
       "title": "Founder",
       "companyName": "Breakthrough Energy",
       "location": "",
-      "description": "100_100/B56ZoI4SGPI0AQ-/0/1761085563539/breakthrough_energy_logo?e=1789603200&v=beta&t=j12KY_CkN0-2K_Xym3SFUsuA0NEqp6WOUJKuAcoVC8c 200_200/B56ZoI4SGPI0AI-/0/1761085563539/breakthrough_energy_logo?e=1789603200&v=beta&t=NU9knrZVk1MlWdrkBXyy7C-J9hYqnPJp_9yweVCe9mo 400_400/B56ZoI4SGPI0AY-/0/1761085563539/breakthrough_energy_logo?e=1789603200&v=beta&t=J1pw3Ehh0eD3uFwY981iDMmgx_BlCSzGxRSa-v0Mvtw",
+      "description": "2000 – Present none entity-collection-item-6f692ac9",
       "timePeriod": {
         "startDate": "2015",
         "endDate": "Present"
@@ -32,7 +32,7 @@
       "title": "Co-founder",
       "companyName": "Microsoft",
       "location": "",
-      "description": "100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1789603200&v=beta&t=PZsResnhobUBxhtTu8jfRK-eI1SS-UTKYHpRf-gq4M4 200_200/B56ZYQ0mrGGoAM-/0/1744038948046/microsoft_logo?e=1789603200&v=beta&t=UNPbhAGEteFWT-PsrUJGmnRqLlr76jTukAvnP_SzITA 400_400/B56ZYQ0mrGGoAc-/0/1744038948046/microsoft_logo?e=1789603200&v=beta&t=VLtcj1EBOJV2LA4_rVYP9zGho3r23V0MTXGH5p2Z7gw",
+      "description": "Breakthrough Energy 2015 – Present entity-collection-item-1a88b907",
       "timePeriod": {
         "startDate": "1975",
         "endDate": "Present"
@@ -41,9 +41,9 @@
   ],
   "education": [
     {
-      "schoolName": "open",
-      "degreeName": "small",
-      "fieldOfStudy": "Harvard University",
+      "schoolName": "Harvard University",
+      "degreeName": "p",
+      "fieldOfStudy": "WIDTH_AND_HEIGHT",
       "timePeriod": {
         "startDate": "1973",
         "endDate": "1975"
@@ -53,158 +53,7 @@
   "skills": [],
   "certifications": [],
   "languages": [],
-  "featured": [
-    {
-      "title": "profile-card-featured",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "ufj4P71lTkCVVyA2M/QqOw==",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "8q81PwPpSMGGXOFT7d9v5g==",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "ProfileCardsServedEvent",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "default",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "section",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "_5b216717 c85c4b08 a9ec5584 _530aaf77 _80120a9c _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "div",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "aa13b50b _01e54e47 _0e9ecad1 c227fcfa debf804b _258b0d42 a47406f2 _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "aa13b50b _01e54e47 _0e9ecad1 c227fcfa debf804b _258b0d42 a47406f2 f4de4f5a _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "d1141c52 _8cd77912 _91df544f _01e54e47 a8841267 _3c869844 debf804b _258b0d42 _8ee9e85d _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "horizontal",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "h2",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "_02484ad3 _5a137f55 _1736033f bb60b960 e5511fb8 _1ce8d075 b4f312e9 dbc6a59b bde9e0a3 c6cab855",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "id",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "currentPagefeaturedSection",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "isEndfeaturedSection",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "isBeginningfeaturedSection",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "1.5x",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "3x",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "1x",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "li",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "0",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "carousel-child-container",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "contents",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "a612d353 _1fa0d777 b3195902 _8d735d78 _80120a9c _0230f7b3 _61f2ac23 c85c4b08 a9ec5584 _530aaf77 _20837f7b _9d2bdca9 _9097da5d _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "listitem",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "aa13b50b _01e54e47 _0e9ecad1 c227fcfa debf804b _258b0d42 a47406f2 _9d2bdca9 _9097da5d _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "aa13b50b _01e54e47 _0e9ecad1 c227fcfa _9c6f4afc _258b0d42 a47406f2 _9d2bdca9 _9097da5d a9ec5584 e4a42fcd _350a8c37",
-      "url": null,
-      "description": ""
-    },
-    {
-      "title": "1",
-      "url": null,
-      "description": ""
-    }
-  ],
+  "featured": [],
   "services": [],
   "errors": [
     {
